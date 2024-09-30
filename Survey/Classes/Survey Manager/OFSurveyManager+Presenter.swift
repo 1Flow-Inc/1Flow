@@ -28,6 +28,12 @@ extension OFSurveyManager {
         } else {
             kPrimaryTitleColor = UIColor.black
         }
+        if let colorHex = survey.surveySettings?.sdkTheme?.backgroundColor {
+            let color = UIColor.colorFromHex(colorHex)
+            kBackgroundColor = color
+        } else {
+            kBackgroundColor = UIColor.white
+        }
         kSecondaryTitleColor = kPrimaryTitleColor.withAlphaComponent(0.8)
         kFooterColor = kPrimaryTitleColor.withAlphaComponent(0.6)
         kOptionBackgroundColor = kPrimaryTitleColor.withAlphaComponent(0.05)
