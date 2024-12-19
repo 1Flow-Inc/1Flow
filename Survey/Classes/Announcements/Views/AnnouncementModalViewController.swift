@@ -164,6 +164,7 @@ class AnnouncementModalViewController: UIViewController {
                 "link_url": urlString
             ]
         )
+        didTapCloseButton(self)
     }
 }
 
