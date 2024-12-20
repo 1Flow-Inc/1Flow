@@ -74,7 +74,7 @@ class BannerView: UIView {
         self.frame = frame
     }
 
-    @IBAction private func didTappedClose(_ sender: Any) {
+    @IBAction func didTappedClose(_ sender: Any) {
         delegate?.bannerViewDidTapppedClosed(self)
     }
 }
@@ -94,6 +94,7 @@ extension BannerView: UITextViewDelegate {
                 "link_url": details?.action?.link ?? ""
             ]
         )
+        didTappedClose(self)
         return false
     }
 }

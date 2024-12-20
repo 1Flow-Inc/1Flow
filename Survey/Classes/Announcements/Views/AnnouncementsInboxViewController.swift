@@ -220,6 +220,7 @@ extension AnnouncementsInboxViewController: AnnouncementsCellDelegate {
     func didTapActionButton(index: Int) {
         announcements?[index].seen = true
         tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .none)
+        didTapClose(self)
     }
 
     func cellDidFinishCalculatingHeight(index: Int, height: CGFloat) {
